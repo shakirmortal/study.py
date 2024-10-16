@@ -1,14 +1,5 @@
 import streamlit as st
-import subprocess
-import sys
-
-@st.cache_resource
-def install_transformers():
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "transformers"])
-
-install_transformers()
-
-from transformers import GPTNeoForCausalLM, GPT2Tokenizer 
+from transformers import GPTNeoForCausalLM, GPT2Tokenizer
 # ... rest of your code
  # ...
 
