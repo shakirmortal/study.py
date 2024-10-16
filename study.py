@@ -1,6 +1,6 @@
 import streamlit as st
- import subprocess
- import sys
+import subprocess
+import sys
 
  @st.cache_resource
  def install_transformers():
