@@ -1,9 +1,9 @@
-        import streamlit as st
-        import subprocess
-        import sys
-        @st.cache_resource
-        def install_transformers():
-            subprocess.check_call([sys.executable, "-m", "pip", "install", "transformers"])
+import streamlit as st
+import subprocess
+import sys
+@st.cache_resource
+def install_transformers():
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "transformers"])
         install_transformers()
     # ...
 
