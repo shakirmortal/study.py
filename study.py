@@ -1,8 +1,8 @@
 import streamlit as st
 from transformers import GPTNeoForCausalLM, GPT2Tokenizer
 
-# Load your fine-tuned model and tokenizer
-model_name = "./fine-tuned-model"  # Path to your fine-tuned model directory
+# Load the fine-tuned model and tokenizer
+model_name = "./fine-tuned-model"  # Update this path if necessary
 model = GPTNeoForCausalLM.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 
@@ -32,3 +32,4 @@ subject = st.text_input("Enter the subject:", "Physics")
 if st.button("Generate Study Plan"):
     study_plan = generate_study_plan(subject)
     st.markdown(study_plan)
+
