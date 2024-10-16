@@ -1,5 +1,16 @@
 import streamlit as st
-from transformers import GPTNeoForCausalLM, GPT2Tokenizer
+ import subprocess
+ import sys
+
+ @st.cache_resource
+ def install_transformers():
+     subprocess.check_call([sys.executable, "-m", "pip", "install", "transformers"])
+
+ install_transformers()
+
+ # Rest of your import statements below
+ from transformers import GPTNeoForCausalLM, GPT2Tokenizer
+ # ...
 
 # Load the fine-tuned model and tokenizer
 model_name = "./study"  # Update this path if necessary
