@@ -2,7 +2,7 @@ import streamlit as st
 from transformers import GPTNeoForCausalLM, GPT2Tokenizer
 
 # Load the fine-tuned model and tokenizer
-model_name = "./fine-tuned-model"  # Update this path if necessary
+model_name = "./study"  # Update this path if necessary
 model = GPTNeoForCausalLM.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 
